@@ -22,17 +22,28 @@ public class User {
     private String companyName;
     @Column
     private String court;
+    @Column(name = "is_ready")
+    private boolean isReady;
 
     public User() {
     }
 
-    public User(UUID id, String email, String firstName, String lastName, String companyName, String court) {
+    public User(UUID id, String email, String firstName, String lastName, String companyName, String court, boolean isReady) {
         this.id = id;
         this.email = email;
         this.firstName = firstName;
         this.lastName = lastName;
         this.companyName = companyName;
         this.court = court;
+        this.isReady = isReady;
+    }
+
+    public boolean isReady() {
+        return isReady;
+    }
+
+    public void setReady(boolean ready) {
+        isReady = ready;
     }
 
     public UUID getId() {

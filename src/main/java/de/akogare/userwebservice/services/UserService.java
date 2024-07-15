@@ -20,20 +20,20 @@ public class UserService {
 
     public Optional<UserResponse> saveUser(UserRequest user) {
         User userEntity = new User(user.id(), user.email(), user.firstName(), user.lastName(),
-                user.companyName(), user.court());
+                user.companyName(), user.court(), user.isReady());
 
         User savedEntity = userRepository.save(userEntity);
 
         UserResponse response = new UserResponse(savedEntity.getId(), savedEntity.getEmail(),
                 savedEntity.getFirstName(), savedEntity.getLastName(), savedEntity.getCompanyName(),
-                savedEntity.getCourt());
+                savedEntity.getCourt(),  savedEntity.isReady());
         return Optional.of(response);
     }
 
     public Optional<UserResponse> getUserById(UUID id) {
         Optional<User> user = userRepository.findById(id);
         return user.map(value -> new UserResponse(value.getId(), value.getEmail(), value.getFirstName(),
-                value.getLastName(), value.getCompanyName(), value.getCourt()));
+                value.getLastName(), value.getCompanyName(), value.getCourt(), value.isReady()));
     }
 
 
