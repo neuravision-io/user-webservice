@@ -1,3 +1,4 @@
+/* V1__init.sql */
 -- Create schema if not exists
 CREATE SCHEMA IF NOT EXISTS user_schema;
 
