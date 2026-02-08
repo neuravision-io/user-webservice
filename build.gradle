@@ -31,8 +31,8 @@ dependencies {
     /*Security*/
     implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client'
     /*OpenAPI*/
-    implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.8.13'
-    implementation 'org.springdoc:springdoc-openapi-starter-webmvc-api:2.8.13'
+    implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:3.0.1'
+    implementation 'org.springdoc:springdoc-openapi-starter-webmvc-api:3.0.1'
     /*FlyWay*/
     implementation 'org.flywaydb:flyway-core'
     implementation 'org.flywaydb:flyway-database-postgresql'
